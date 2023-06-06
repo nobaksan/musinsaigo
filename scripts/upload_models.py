@@ -3,8 +3,8 @@ from shutil import copyfile
 import boto3
 import torch
 import yaml
-from diffusers import EulerDiscreteScheduler, StableDiffusionPipeline
-from diffusers.models import AutoencoderKL
+from diffusers import EulerDiscreteScheduler, StableDiffusionPipeline  # noqa
+from diffusers.models import AutoencoderKL  # noqa
 from huggingface_hub import create_repo, upload_folder
 from utils.logger import logger
 from utils.misc import create_bucket_if_not_exists, decompress_file
@@ -18,7 +18,9 @@ CROSS_ATTENTION_SCALE = 0.5
 
 
 if __name__ == "__main__":
-    with open(os.path.join("..", "config", "config.yaml"), encoding="utf-8") as file_path:
+    with open(
+        os.path.join("..", "config", "config.yaml"), encoding="utf-8"
+    ) as file_path:
         config = yaml.safe_load(file_path)
 
     profile_name = config["environment"]["iam_profile_name"]

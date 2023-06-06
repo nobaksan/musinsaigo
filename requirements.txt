@@ -1,4 +1,4 @@
-boto3==1.26.145
+boto3==1.26.147
 diffusers==0.16.1
 matplotlib==3.7.0
 pillow==9.4.0

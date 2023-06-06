@@ -1,11 +1,9 @@
 # Here are some references.
 # https://huggingface.co/docs/sagemaker/inference
-# https://huggingface.co/blog/blip-2?fbclid=IwAR1iTzu7a_2zSv6dyeQt2dlgEtPFDQTfcvXoudOgeVMDin4IGP8fUz61ZL8
-# https://huggingface.co/blog/lora
-# https://ngwaifoong92.medium.com/how-to-fine-tune-stable-diffusion-using-lora-85690292c6a8
+# https://huggingface.co/docs/diffusers/training/lora
+# https://github.com/huggingface/diffusers/blob/main/examples/text_to_image/train_text_to_image_lora.py
 # https://stable-diffusion-art.com/common-problems-in-ai-images-and-how-to-fix-them/#Garbled_faces_and_eyes_problems
 # https://stable-diffusion-art.com/know-these-important-parameters-for-stunning-ai-images/
-# https://github.com/huggingface/diffusers/blob/main/examples/text_to_image/train_text_to_image_lora.py
 
 import os
 import random
@@ -128,7 +126,6 @@ if __name__ == "__main__":
         logger.info("model uploaded to: %s", train_model_uri)
 
     if model_data is None:
-
         # Preparing a dataset for image captioning with the BLIP2 model
 
         if not SKIP_DATA_PREP:
