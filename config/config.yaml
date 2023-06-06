@@ -1,0 +1,39 @@
+environment:
+  iam_profile_name: default
+  region_name: us-east-1
+  iam_role:
+  ebs_images_dir: images
+  ebs_models_dir: models
+  s3_bucket:
+  s3_base_prefix: musinsaigo
+  s3_dataset_prefix: dataset
+  unsplash_api_key:
+  hf_token:
+  wandb_api_key:
+
+data:
+  source: musinsa
+  num_images: 2000
+  query: fashion person
+  is_street_snap: True
+  prompt_prefix: fashion photo of
+  prompt_suffix:
+
+model:
+  model_data:
+  image_prep_instance_type: ml.p3.2xlarge
+  data_prep_instance_type: ml.m5.xlarge
+  train_instance_type: ml.g5.2xlarge
+  infer_instance_type: ml.g4dn.2xlarge
+  num_train_epochs:
+  resolution: 768
+  center_crop: False
+  random_flip: True
+  batch_size: 4
+  max_train_steps: 3000
+  learning_rate: 1e-04
+  lr_scheduler: constant
+  push_to_hub: False
+  hf_model_id: youngmki/musinsaigo-1.0
+  reduce_memory_usage: True
+  sm_endpoint_name: musinsaigo
